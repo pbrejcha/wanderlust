@@ -1,0 +1,136 @@
+.unauthorized-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+}
+
+.unauthorized-card {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.unauthorized-icon {
+  color: #ef4444;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.unauthorized-card h1 {
+  color: #1a202c;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.unauthorized-card p {
+  color: #718096;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.unauthorized-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-link,
+.home-link {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-link {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.login-link:hover {
+  background-color: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.home-link {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+
+.home-link:hover {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.return-info {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.return-info code {
+  background-color: #e5e7eb;
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .unauthorized-card {
+    background: #1a1a1a;
+    color: #e5e5e5;
+  }
+  
+  .unauthorized-card h1 {
+    color: #f7fafc;
+  }
+  
+  .unauthorized-card p {
+    color: #a0aec0;
+  }
+  
+  .home-link {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    border-color: #4a5568;
+  }
+  
+  .home-link:hover {
+    background-color: #4a5568;
+    border-color: #718096;
+  }
+  
+  .return-info {
+    background-color: #2d3748;
+    border-color: #4a5568;
+    color: #cbd5e0;
+  }
+  
+  .return-info code {
+    background-color: #4a5568;
+  }
+}

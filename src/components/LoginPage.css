@@ -1,0 +1,118 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-card {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-card h1 {
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.login-card p {
+  color: #718096;
+  margin-bottom: 2rem;
+}
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  min-height: 48px;
+}
+
+.login-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.button-icon {
+  flex-shrink: 0;
+}
+
+.github-button {
+  background-color: #1a202c;
+  color: white;
+}
+
+.github-button:hover {
+  background-color: #2d3748;
+}
+
+.google-button {
+  background-color: white;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+
+.google-button:hover {
+  border-color: #d1d5db;
+  background-color: #f9fafb;
+}
+
+.login-footer {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .login-card {
+    background: #1a1a1a;
+    color: #e5e5e5;
+  }
+  
+  .login-card h1 {
+    color: #f7fafc;
+  }
+  
+  .login-card p {
+    color: #a0aec0;
+  }
+  
+  .google-button {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    border-color: #4a5568;
+  }
+  
+  .google-button:hover {
+    background-color: #4a5568;
+    border-color: #718096;
+  }
+}
