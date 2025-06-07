@@ -3,54 +3,54 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem;
-  background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+  padding: var(--spacing-8);
+  background: var(--gradient-error);
 }
 
 .unauthorized-card {
   background: white;
-  border-radius: 12px;
-  padding: 3rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-12);
+  box-shadow: var(--shadow-xl);
   max-width: 500px;
   width: 100%;
   text-align: center;
 }
 
 .unauthorized-icon {
-  color: #ef4444;
-  margin-bottom: 1.5rem;
+  color: var(--color-error-500);
+  margin-bottom: var(--spacing-6);
   display: flex;
   justify-content: center;
 }
 
 .unauthorized-card h1 {
-  color: #1a202c;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: 700;
+  color: var(--color-dark-700);
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
 }
 
 .unauthorized-card p {
-  color: #718096;
-  margin-bottom: 2rem;
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-8);
   line-height: 1.6;
 }
 
 .unauthorized-actions {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-4);
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-6);
 }
 
 .login-link,
 .home-link {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--border-radius-md);
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.2s ease-in-out;
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-default);
   cursor: pointer;
   min-height: 48px;
   display: flex;
@@ -59,78 +59,78 @@
 }
 
 .login-link {
-  background-color: #4f46e5;
+  background-color: var(--color-primary-500);
   color: white;
 }
 
 .login-link:hover {
-  background-color: #4338ca;
+  background-color: var(--color-primary-600);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  box-shadow: var(--shadow-button);
 }
 
 .home-link {
-  background-color: #f3f4f6;
-  color: #374151;
-  border: 2px solid #e5e7eb;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  border: 2px solid var(--color-gray-200);
 }
 
 .home-link:hover {
-  background-color: #e5e7eb;
-  border-color: #d1d5db;
+  background-color: var(--color-gray-200);
+  border-color: var(--color-gray-300);
   transform: translateY(-1px);
 }
 
 .return-info {
-  font-size: 0.875rem;
-  color: #9ca3af;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
   margin: 0;
-  padding: 1rem;
-  background-color: #f9fafb;
-  border-radius: 6px;
-  border: 1px solid #e5e7eb;
+  padding: var(--spacing-4);
+  background-color: var(--color-gray-50);
+  border-radius: var(--border-radius-default);
+  border: 1px solid var(--color-gray-200);
 }
 
 .return-info code {
-  background-color: #e5e7eb;
-  padding: 0.125rem 0.25rem;
-  border-radius: 3px;
+  background-color: var(--color-gray-200);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-sm);
   font-family: 'Courier New', monospace;
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
 }
 
 @media (prefers-color-scheme: dark) {
   .unauthorized-card {
-    background: #1a1a1a;
+    background: var(--color-dark-800);
     color: #e5e5e5;
   }
   
   .unauthorized-card h1 {
-    color: #f7fafc;
+    color: var(--color-dark-50);
   }
   
   .unauthorized-card p {
-    color: #a0aec0;
+    color: var(--color-dark-300);
   }
   
   .home-link {
-    background-color: #2d3748;
-    color: #e2e8f0;
-    border-color: #4a5568;
+    background-color: var(--color-dark-600);
+    color: var(--color-dark-100);
+    border-color: var(--color-dark-500);
   }
   
   .home-link:hover {
-    background-color: #4a5568;
-    border-color: #718096;
+    background-color: var(--color-dark-500);
+    border-color: var(--color-dark-400);
   }
   
   .return-info {
-    background-color: #2d3748;
-    border-color: #4a5568;
-    color: #cbd5e0;
+    background-color: var(--color-dark-600);
+    border-color: var(--color-dark-500);
+    color: var(--color-dark-200);
   }
   
   .return-info code {
-    background-color: #4a5568;
+    background-color: var(--color-dark-500);
   }
 }

@@ -1,45 +1,45 @@
 .app-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 1rem 0;
+  background: var(--color-gray-50);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding: var(--spacing-4) 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: var(--z-index-header);
 }
 
 .header-content {
-  max-width: 1280px;
+  max-width: var(--layout-max-width);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 var(--layout-container-padding);
 }
 
 .header-left h2 {
   margin: 0;
-  color: #1a202c;
-  font-size: 1.5rem;
-  font-weight: 700;
+  color: var(--color-dark-700);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-4);
 }
 
 .user-info {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--spacing-3);
 }
 
 .user-avatar {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius-full);
+  border: 2px solid var(--color-gray-200);
 }
 
 .user-details {
@@ -49,33 +49,33 @@
 }
 
 .user-name {
-  font-weight: 500;
-  color: #1a202c;
-  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dark-700);
+  font-size: var(--font-size-sm);
 }
 
 .user-provider {
-  font-size: 0.75rem;
-  color: #6b7280;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
   text-transform: capitalize;
 }
 
 .logout-button {
-  background-color: #ef4444;
+  background-color: var(--color-error-500);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.875rem;
-  font-weight: 500;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--border-radius-default);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition-default);
 }
 
 .logout-button:hover {
-  background-color: #dc2626;
+  background-color: var(--color-error-600);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+  box-shadow: var(--shadow-button-hover);
 }
 
 .logout-button:active {
@@ -84,7 +84,7 @@
 
 @media (max-width: 768px) {
   .header-content {
-    padding: 0 1rem;
+    padding: 0 var(--layout-container-padding-mobile);
   }
   
   .user-details {
@@ -92,30 +92,30 @@
   }
   
   .logout-button {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8rem;
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-xs);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .app-header {
-    background: #1a1a1a;
-    border-bottom-color: #374151;
+    background: var(--color-dark-800);
+    border-bottom-color: var(--color-dark-500);
   }
   
   .header-left h2 {
-    color: #f7fafc;
+    color: var(--color-dark-50);
   }
   
   .user-name {
-    color: #e2e8f0;
+    color: var(--color-dark-100);
   }
   
   .user-provider {
-    color: #a0aec0;
+    color: var(--color-dark-300);
   }
   
   .user-avatar {
-    border-color: #4a5568;
+    border-color: var(--color-dark-500);
   }
 }

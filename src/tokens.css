@@ -1,0 +1,100 @@
+/* CSS Custom Properties generated from design tokens */
+:root {
+  /* Colors */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  
+  --color-dark-50: #f7fafc;
+  --color-dark-100: #e2e8f0;
+  --color-dark-200: #cbd5e0;
+  --color-dark-300: #a0aec0;
+  --color-dark-400: #718096;
+  --color-dark-500: #4a5568;
+  --color-dark-600: #2d3748;
+  --color-dark-700: #1a202c;
+  --color-dark-800: #1a1a1a;
+  
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  
+  --color-primary-500: #4f46e5;
+  --color-primary-600: #4338ca;
+  
+  --color-github: #1a202c;
+  --color-github-hover: #2d3748;
+  
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 3px;
+  --border-radius-default: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 50%;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.5rem;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-default: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-button: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-button-hover: 0 2px 8px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition-fast: all 0.1s ease-in-out;
+  --transition-default: all 0.2s ease-in-out;
+  --transition-slow: all 0.3s ease-in-out;
+  
+  /* Layout */
+  --layout-max-width: 1280px;
+  --layout-container-padding: 2rem;
+  --layout-container-padding-mobile: 1rem;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-error: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+  
+  /* Z-Index */
+  --z-index-header: 100;
+  --z-index-modal: 100;
+  --z-index-tooltip: 200;
+}
