@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider } from './contexts/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { LoginPage } from './components/LoginPage';
+import { LandingPage } from './components/LandingPage';
 import { UnauthorizedPage } from './components/UnauthorizedPage';
 import { GitHubCallback } from './components/GitHubCallback';
 import { GoogleCallback } from './components/GoogleCallback';
@@ -17,6 +18,7 @@ function App() {
           <Header />
           <main className="main-content">
             <Routes>
+              <Route path="/landing" element={<LandingPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/unauthorized" element={<UnauthorizedPage />} />
               <Route path="/auth/github/callback" element={<GitHubCallback />} />
