@@ -1,6 +1,19 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { styled } from '@linaria/react';
 import { useAuth } from '../contexts/AuthContext';
+
+const CallbackContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+const LoadingMessage = styled.div`
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+`;
 
 export const GitHubCallback: React.FC = () => {
   const navigate = useNavigate();
@@ -37,7 +50,7 @@ export const GitHubCallback: React.FC = () => {
         };
 
         login(mockUserData);
-        navigate('/');
+        navigate('/home');
       } catch (error) {
         console.error('GitHub callback error:', error);
         navigate('/unauthorized');
@@ -48,13 +61,8 @@ export const GitHubCallback: React.FC = () => {
   }, [searchParams, login, navigate]);
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh' 
-    }}>
-      <div>Processing GitHub authentication...</div>
-    </div>
+    <CallbackContainer>
+      <LoadingMessage>Processing GitHub authentication...</LoadingMessage>
+    </CallbackContainer>
   );
 };

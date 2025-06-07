@@ -18,13 +18,13 @@ function App() {
           <Header />
           <main className="main-content">
             <Routes>
-              <Route path="/landing" element={<LandingPage />} />
+              <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/unauthorized" element={<UnauthorizedPage />} />
               <Route path="/auth/github/callback" element={<GitHubCallback />} />
               <Route path="/auth/google/callback" element={<GoogleCallback />} />
               <Route
-                path="/"
+                path="/home"
                 element={
                   <ProtectedRoute>
                     <HomePage />

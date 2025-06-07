@@ -12,7 +12,7 @@ export const LandingPage: React.FC = () => {
             Your secure application with OAuth authentication
           </p>
           <div className="hero-actions">
-            <Link to="/login" className="cta-button primary">
+            <Link to="/home" className="cta-button primary">
               Get Started
             </Link>
             <Link to="/login" className="cta-button secondary">
