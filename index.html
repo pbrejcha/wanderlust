@@ -5,38 +5,11 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://accounts.google.com/gsi/client" async></script>
-  <script>
-    async function handleSignInWithGoogle(response) {
-      const { data, error } = await supabase.auth.signInWithIdToken({
-        provider: 'google',
-        token: response.credential,
-      })
-    }
-  </script>
   <title>Vite + React + TS</title>
 </head>
 
 <body>
   <div id="root"></div>
-  <div
-  id="g_id_onload"
-  data-client_id="635297439921-119oh3atunu0kuo79uk0busv2n3qrlfh.apps.googleusercontent.com"
-  data-context="signin"
-  data-ux_mode="popup"
-  data-callback="handleSignInWithGoogle"
-  data-auto_prompt="false"
-></div>
-
-<div
-  class="g_id_signin"
-  data-type="standard"
-  data-shape="rectangular"
-  data-theme="outline"
-  data-text="signin_with"
-  data-size="large"
-  data-logo_alignment="left"
-></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
