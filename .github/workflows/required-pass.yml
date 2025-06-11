@@ -1,4 +1,4 @@
-name: Required PR Check
+name: Basic PR Action
 
 on:
   pull_request:
