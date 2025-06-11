@@ -1,0 +1,11 @@
+name: Required PR Check
+
+on:
+  pull_request:
+
+jobs:
+  always-pass:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Always pass
+        run: echo "This check always passes"
