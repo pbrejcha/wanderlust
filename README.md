@@ -1,11 +1,73 @@
-# React + TypeScript + Vite
+# Wanderlust - Travel Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Vite web application for travel enthusiasts to explore destinations and plan trips.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application is deployed on GitHub Pages: **https://pbrejcha.github.io/vamos/**
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 18 or higher
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build locally
+
+### Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## 📦 Deployment
+
+This project is automatically deployed to GitHub Pages using GitHub Actions. The deployment process:
+
+1. **Automatic Deployment**: Every push to the `main` branch triggers the deployment workflow
+2. **Manual Deployment**: Can also be triggered manually from the GitHub Actions tab
+3. **Build Process**: 
+   - Installs dependencies
+   - Runs linting checks
+   - Builds the application using Vite
+   - Deploys to GitHub Pages
+
+### Deployment Configuration
+
+- **Base URL**: `/vamos/` (configured in `vite.config.ts`)
+- **Homepage**: `https://pbrejcha.github.io/vamos/` (configured in `package.json`)
+- **Build Output**: `dist/` directory
+- **Workflow**: `.github/workflows/deploy.yml`
+
+### Manual Deployment
+
+To deploy manually:
+
+1. Go to the repository's GitHub Actions tab
+2. Select the "Deploy to GitHub Pages" workflow
+3. Click "Run workflow" and select the main branch
+
+## 🏗️ Tech Stack
+
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Linaria (CSS-in-JS)
+- **Linting**: ESLint with TypeScript support
+- **Deployment**: GitHub Pages with GitHub Actions
 
 ## Expanding the ESLint configuration
 
