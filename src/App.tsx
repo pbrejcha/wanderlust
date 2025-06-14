@@ -153,8 +153,9 @@ const HeroTitle = styled.h1`
   }
 `
 
-const HeroSubtitle = styled.p`
+const HeroSubtitle = styled.h2`
   font-size: 1.25rem;
+  font-weight: 400;
   color: ${colors.textSecondary};
   margin: 0 0 2rem 0;
   line-height: 1.6;
@@ -215,7 +216,7 @@ function App() {
       <MainContent>
         <HeroSection>
           <HeroTitle>Welcome to Wanderlust</HeroTitle>
-          <HeroSubtitle>Discover amazing destinations and create unforgettable travel experiences</HeroSubtitle>
+          <HeroSubtitle>Plan collaborative adventures with friends and family to create unforgettable memories while discovering amazing destinations together</HeroSubtitle>
           <CTAButton>Start Exploring</CTAButton>
         </HeroSection>
       </MainContent>
