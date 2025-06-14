@@ -169,14 +169,14 @@ const ItineraryManager: React.FC<ItineraryManagerProps> = ({ trip }) => {
   const [editingItinerary, setEditingItinerary] = useState<Itinerary | null>(null);
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
 
-  useEffect(() => {
-    loadItineraries();
-  }, [loadItineraries]);
-
   const loadItineraries = useCallback(() => {
     const tripItineraries = ItineraryService.getItinerariesSorted(trip.id);
     setItineraries(tripItineraries);
   }, [trip.id]);
+
+  useEffect(() => {
+    loadItineraries();
+  }, [loadItineraries]);
 
   const handleAddClick = () => {
     setEditingItinerary(null);
