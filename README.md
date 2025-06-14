@@ -4,7 +4,7 @@ A React + TypeScript + Vite web application for travel enthusiasts to explore de
 
 ## 🚀 Live Demo
 
-The application is deployed on GitHub Pages: **https://pbrejcha.github.io/vamos/**
+The application is deployed on GitHub Pages: **https://pbrejcha.github.io/wanderlust/**
 
 ## 🛠️ Development
 
@@ -48,8 +48,8 @@ This project is automatically deployed to GitHub Pages using GitHub Actions. The
 
 ### Deployment Configuration
 
-- **Base URL**: `/vamos/` (configured in `vite.config.ts`)
-- **Homepage**: `https://pbrejcha.github.io/vamos/` (configured in `package.json`)
+- **Base URL**: `/wanderlust/` (configured in `vite.config.ts`)
+- **Homepage**: `https://pbrejcha.github.io/wanderlust/` (configured in `package.json`)
 - **Build Output**: `dist/` directory
 - **Workflow**: `.github/workflows/deploy.yml`
 
