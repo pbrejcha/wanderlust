@@ -1,9 +1,37 @@
 import { styled } from '@linaria/react'
 import './App.css'
 
+// Color variables
+const colors = {
+  // Primary colors
+  primary: '#3498db',
+  primaryDark: '#2980b9',
+  
+  // Text colors
+  textPrimary: '#2c3e50',
+  textSecondary: '#555',
+  textLight: '#ffffff',
+  
+  // Background colors
+  backgroundBeige: '#f5f5dc',
+  backgroundWhite: '#ffffff',
+  backgroundWhiteTransparent: 'rgba(255, 255, 255, 0.8)',
+  
+  // Border colors
+  borderLight: '#e0e0e0',
+  
+  // Gradient colors
+  gradientPurpleLight: '#667eea',
+  gradientPurpleDark: '#764ba2',
+  
+  // Shadow colors
+  shadowPrimary: 'rgba(52, 152, 219, 0.3)',
+  shadowPrimaryHover: 'rgba(52, 152, 219, 0.4)',
+}
+
 const AppContainer = styled.div`
   min-height: 100vh;
-  background: linear-gradient(180deg, #f5f5dc 0%, #ffffff 100%);
+  background: linear-gradient(180deg, ${colors.backgroundBeige} 0%, ${colors.backgroundWhite} 100%);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 `
 
@@ -12,8 +40,8 @@ const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #e0e0e0;
-  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid ${colors.borderLight};
+  background: ${colors.backgroundWhiteTransparent};
   backdrop-filter: blur(10px);
   
   @media (max-width: 480px) {
@@ -24,11 +52,11 @@ const NavBar = styled.nav`
 const Logo = styled.a`
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: ${colors.textPrimary};
   text-decoration: none;
   
   &:hover {
-    color: #3498db;
+    color: ${colors.primary};
   }
 `
 
@@ -49,13 +77,13 @@ const NavLinks = styled.div`
 `
 
 const NavLink = styled.a`
-  color: #555;
+  color: ${colors.textSecondary};
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
   
   &:hover {
-    color: #3498db;
+    color: ${colors.primary};
   }
 `
 
@@ -68,11 +96,11 @@ const UserSection = styled.div`
 const NotificationBell = styled.div`
   font-size: 1.2rem;
   cursor: pointer;
-  color: #555;
+  color: ${colors.textSecondary};
   transition: color 0.2s ease;
   
   &:hover {
-    color: #3498db;
+    color: ${colors.primary};
   }
 `
 
@@ -80,11 +108,11 @@ const UserAvatar = styled.div`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, ${colors.gradientPurpleLight} 0%, ${colors.gradientPurpleDark} 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: ${colors.textLight};
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
@@ -112,7 +140,7 @@ const HeroSection = styled.section`
 const HeroTitle = styled.h1`
   font-size: 3rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: ${colors.textPrimary};
   margin: 0 0 1rem 0;
   line-height: 1.2;
   
@@ -127,7 +155,7 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.p`
   font-size: 1.25rem;
-  color: #555;
+  color: ${colors.textSecondary};
   margin: 0 0 2rem 0;
   line-height: 1.6;
   
@@ -141,8 +169,8 @@ const HeroSubtitle = styled.p`
 `
 
 const CTAButton = styled.button`
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-  color: white;
+  background: linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryDark} 100%);
+  color: ${colors.textLight};
   border: none;
   padding: 1rem 2rem;
   font-size: 1.1rem;
@@ -150,11 +178,11 @@ const CTAButton = styled.button`
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 4px 15px ${colors.shadowPrimary};
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 6px 20px ${colors.shadowPrimaryHover};
   }
   
   &:active {
