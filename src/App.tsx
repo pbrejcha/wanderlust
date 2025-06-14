@@ -215,8 +215,8 @@ function App() {
 
       <MainContent>
         <HeroSection>
-          <HeroTitle>Welcome to Wanderlust</HeroTitle>
-          <HeroSubtitle>Plan collaborative adventures with friends and family to create unforgettable memories while discovering amazing destinations together</HeroSubtitle>
+          <HeroTitle>Wanderlust</HeroTitle>
+          <HeroSubtitle>Adventure together</HeroSubtitle>
           <CTAButton>Start Exploring</CTAButton>
         </HeroSection>
       </MainContent>
