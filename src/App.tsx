@@ -99,120 +99,72 @@ const MainContent = styled.main`
   padding: 2rem;
 `
 
-const PolaroidContainer = styled.div`
-  background: white;
-  padding: 1rem 1rem 3rem 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transform: rotate(-2deg);
-  transition: transform 0.3s ease;
-  border-radius: 2px;
+const HeroSection = styled.section`
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+`
+
+const HeroTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+`
+
+const HeroSubtitle = styled.p`
+  font-size: 1.25rem;
+  color: #555;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+`
+
+const CTAButton = styled.button`
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
   
   &:hover {
-    transform: rotate(0deg) scale(1.02);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  }
+  
+  &:active {
+    transform: translateY(0);
   }
   
   @media (max-width: 480px) {
-    padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
-`
-
-const IllustrationBox = styled.div`
-  width: 300px;
-  height: 200px;
-  background: linear-gradient(135deg, #87CEEB 0%, #F0E68C 100%);
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
-  
-  @media (max-width: 480px) {
-    width: 250px;
-    height: 166px;
-  }
-`
-
-const BeachScene = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background: linear-gradient(180deg, #F0E68C 0%, #DEB887 100%);
-`
-
-const Ocean = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40%;
-  background: linear-gradient(180deg, #87CEEB 0%, #4682B4 100%);
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.3);
-    animation: wave 3s ease-in-out infinite;
-  }
-  
-  @keyframes wave {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(10px); }
-  }
-`
-
-const Sun = styled.div`
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #FFD700;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-`
-
-const Woman = styled.div`
-  position: absolute;
-  bottom: 20px;
-  right: 40px;
-  width: 12px;
-  height: 30px;
-  background: #8B4513;
-  border-radius: 6px 6px 0 0;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 2px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #DEB887;
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: -2px;
-    width: 16px;
-    height: 10px;
-    background: #FF6B6B;
-    border-radius: 2px;
-  }
-`
-
-const PolaroidCaption = styled.div`
-  text-align: center;
-  margin-top: 1rem;
-  font-family: 'Courier New', monospace;
-  color: #555;
-  font-size: 0.9rem;
 `
 
 function App() {
@@ -233,15 +185,11 @@ function App() {
       </NavBar>
 
       <MainContent>
-        <PolaroidContainer>
-          <IllustrationBox>
-            <Sun />
-            <Ocean />
-            <BeachScene />
-            <Woman />
-          </IllustrationBox>
-          <PolaroidCaption>dreaming of distant shores</PolaroidCaption>
-        </PolaroidContainer>
+        <HeroSection>
+          <HeroTitle>Welcome to Wanderlust</HeroTitle>
+          <HeroSubtitle>Discover amazing destinations and create unforgettable travel experiences</HeroSubtitle>
+          <CTAButton>Start Exploring</CTAButton>
+        </HeroSection>
       </MainContent>
     </AppContainer>
   )
