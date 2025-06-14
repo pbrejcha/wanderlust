@@ -5,5 +5,5 @@ import wyw from '@wyw-in-js/vite';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), wyw()],
-  base: '/vamos/',
+  base: '/wanderlust/',
 })
