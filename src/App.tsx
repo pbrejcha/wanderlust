@@ -1,5 +1,7 @@
 import { styled } from '@linaria/react'
+import { useState } from 'react'
 import './App.css'
+import TripsPage from './components/TripsPage'
 
 // Color variables
 const colors = {
@@ -197,13 +199,27 @@ const CTAButton = styled.button`
 `
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<'home' | 'trips'>('home');
+
+  const handleNavigateToTrips = () => {
+    setCurrentPage('trips');
+  };
+
+  const handleNavigateToHome = () => {
+    setCurrentPage('home');
+  };
+
+  if (currentPage === 'trips') {
+    return <TripsPage onNavigateHome={handleNavigateToHome} />;
+  }
+
   return (
     <AppContainer>
       <NavBar>
         <Logo href="/">Wanderlust</Logo>
         <NavLinks>
           <NavLink href="/explore">Explore</NavLink>
-          <NavLink href="/trips">Trips</NavLink>
+          <NavLink href="#" onClick={(e) => { e.preventDefault(); handleNavigateToTrips(); }}>Trips</NavLink>
           <NavLink href="/saved">Saved</NavLink>
           <NavLink href="/updates">Updates</NavLink>
           <UserSection>
@@ -217,7 +233,7 @@ function App() {
         <HeroSection>
           <HeroTitle>Wanderlust</HeroTitle>
           <HeroSubtitle>Adventure together</HeroSubtitle>
-          <CTAButton>Start Exploring</CTAButton>
+          <CTAButton onClick={handleNavigateToTrips}>Start Exploring</CTAButton>
         </HeroSection>
       </MainContent>
     </AppContainer>
